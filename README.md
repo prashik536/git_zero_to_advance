@@ -91,3 +91,12 @@ git bisect start
 git bisect bad
 git bisect good <known-working-commit-hash>
 ```
+## 🛠️ Git Roles in the DevOps CI/CD Lifecycle
+Webhooks: Every git push or Pull Request acts as an event trigger that nudges your CI pipeline (Jenkins, GitHub Actions, GitLab CI) to spin up test runners.
+
+Branching Policies: Protecting your main or production branch with policies enforces that peer reviews (PRs) and automated security tests must pass before code deployment.
+
+GitOps: Tools like ArgoCD or Flux monitor Git state. If human engineers manually alter a live Kubernetes cluster configuration, GitOps tools will instantly overwrite it to match the declaration stored inside your Git repository.
+
+## 📖 License & Contribution
+This resource is shared under the MIT License. Contributions to add advanced edge cases, custom alias configurations, or pipeline templates are welcome! Open a Pull Request anytime.
