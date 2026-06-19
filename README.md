@@ -67,3 +67,27 @@ git commit -m "feat: implement user authentication routing"
 # Sync with the remote cloud
 git push origin <branch-name>
 git pull origin <branch-name>  # Fetches and immediately merges
+```
+### 2. Advanced & DevOps Power Tools
+```bash
+# Temporarily shelve changes to work on an urgent bugfix without committing junk
+git stash
+git stash pop
+
+# Rewrite history linearly instead of creating messy merge commits
+git rebase <target-branch>
+
+# Pluck a specific bugfix/commit from one branch and apply it to another (e.g., hotfixes)
+git cherry-pick <commit-hash>
+
+# Create a brand new commit that actively reverses a bad production deployment
+git revert <bad-commit-hash>
+
+# The Emergency Escape Hatch: Find lost commits or accidental hard resets
+git reflog
+
+# Use binary search to automatically pin-point which exact commit broke a pipeline
+git bisect start
+git bisect bad
+git bisect good <known-working-commit-hash>
+```
