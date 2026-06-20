@@ -1,0 +1,135 @@
+GIT CHEAT SHEET WITH REAL SCENARIOS
+
+  -----------------------------
+  1. BASIC FLOW
+  -----------------------------
+  git add . git commit -m
+  “message” git push
+
+  SCENARIO: You changed code
+  and want to push to GitHub ->
+  add -> commit -> push
+  -----------------------------
+
+2. CLONE PROJECT
+
+git clone https://github.com/user/project.git
+
+SCENARIO: Joining new company / project setup
+
+  -----------------------------
+  3. BRANCHING
+  -----------------------------
+  git checkout -b feature-login
+
+  SCENARIO: Working on new
+  feature without breaking main
+  code
+  -----------------------------
+
+4. MERGE
+
+git checkout main git merge feature-login
+
+SCENARIO: Feature completed → merge into main
+
+  -----------------------------
+  5. CONFLICT RESOLUTION
+  -----------------------------
+  Fix code manually git add .
+  git commit -m “resolved
+  conflict”
+
+  SCENARIO: Two developers
+  edited same file
+  -----------------------------
+
+6. HOTFIX (PRODUCTION ISSUE)
+
+git stash git checkout main git pull origin main git checkout -b
+hotfix-prod # fix issue git commit -am “hotfix applied” git push origin
+hotfix-prod
+
+SCENARIO: Production bug needs urgent fix
+
+  -----------------------------
+  7. STASH
+  -----------------------------
+  git stash git stash apply
+
+  SCENARIO: Switching tasks
+  without committing incomplete
+  work
+  -----------------------------
+
+8. UNDO COMMIT
+
+git reset –soft HEAD~1
+
+SCENARIO: Wrong commit message or forgot changes
+
+  -----------------------------
+  9. DELETE CHANGES
+  -----------------------------
+  git reset –hard HEAD~1
+
+  SCENARIO: Bad commit → remove
+  completely
+  -----------------------------
+
+10. PULL LATEST CODE
+
+git pull origin main
+
+SCENARIO: Before starting work → always pull latest code
+
+  -----------------------------
+  11. REBASE
+  -----------------------------
+  git rebase main
+
+  SCENARIO: Keep clean commit
+  history before PR
+  -----------------------------
+
+12. CHERRY PICK
+
+git cherry-pick
+
+SCENARIO: Take specific fix from another branch
+
+  -----------------------------
+  13. CHECK HISTORY
+  -----------------------------
+  git log –oneline
+
+  SCENARIO: Debugging issues /
+  checking commits
+  -----------------------------
+
+14. BLAME
+
+git blame file.txt
+
+SCENARIO: Find who changed a line
+
+  -----------------------------
+  15. TAG RELEASE
+  -----------------------------
+  git tag v1.0 git push origin
+  v1.0
+
+  SCENARIO: Mark production
+  release version
+  -----------------------------
+
+DEVOPS REAL FLOW
+
+1.  git checkout -b feature
+2.  code changes
+3.  git add .
+4.  git commit -m “feature done”
+5.  git push origin feature
+6.  create PR
+7.  merge to main
+8.  CI/CD triggers deployment
